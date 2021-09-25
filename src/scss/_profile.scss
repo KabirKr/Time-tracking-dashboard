@@ -1,0 +1,52 @@
+.profile-card {
+  background-color: $dark-blue;
+  border-radius: $card-border-radius;
+
+  .profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background-color: $blue;
+    color: $light-pale-blue;
+    border-radius: $card-border-radius;
+
+    .img-container {
+      width: 100px;
+      height: 100px;
+      border: 3px solid $light-pale-blue;
+      border-radius: 50%;
+    }
+
+    .content {
+      h2 {
+        font-weight: 400;
+        color: $light-pale-blue;
+      }
+    }
+  }
+
+  .timeframes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+
+    li {
+      .btn {
+        font-weight: 400;
+        font-size: inherit;
+        color: $pale-blue;
+
+        &.active {
+          font-weight: 500;
+          color: $light-pale-blue;
+        }
+
+        &:hover {
+          color: $light-pale-blue;
+        }
+      }
+    }
+  }
+}

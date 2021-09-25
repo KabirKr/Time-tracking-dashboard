@@ -1,0 +1,105 @@
+.data-card {
+  border-radius: $card-border-radius;
+
+  .icon-container {
+    height: 60px;
+    background-repeat: no-repeat;
+    background-position: top right 8%;
+  }
+
+  .content {
+    background: $dark-blue;
+    padding: 2rem;
+    border-radius: $card-border-radius;
+    color: $light-pale-blue;
+    cursor: pointer;
+    margin-top: -10px;
+    z-index: 100;
+
+    &:hover {
+      background: $desaturated-blue;
+    }
+
+    .top {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+
+      h3 {
+        font-weight: 500;
+      }
+
+      svg {
+        fill: $pale-blue;
+      }
+
+      button:hover {
+        svg {
+          fill: $light-pale-blue;
+        }
+      }
+    }
+
+    .bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .current {
+        font-size: 3.5rem;
+      }
+
+      .previous {
+        color: $pale-blue;
+      }
+    }
+  }
+
+  &.work {
+    background: $light-red;
+
+    .icon-container {
+      background-image: url("../images/icon-work.svg");
+    }
+  }
+
+  &.play {
+    background: $soft-blue;
+
+    .icon-container {
+      background-image: url("../images/icon-play.svg");
+    }
+  }
+
+  &.study {
+    background: $light-red-2;
+
+    .icon-container {
+      background-image: url("../images/icon-study.svg");
+    }
+  }
+
+  &.exercise {
+    background: $lime-green;
+
+    .icon-container {
+      background-image: url("../images/icon-exercise.svg");
+    }
+  }
+
+  &.social {
+    background: $violet;
+
+    .icon-container {
+      background-image: url("../images/icon-social.svg");
+    }
+  }
+
+  &.self-care {
+    background: $soft-orange;
+
+    .icon-container {
+      background-image: url("../images/icon-self-care.svg");
+    }
+  }
+}

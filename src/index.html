@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>
+      Time tracking dashboard using HTML, CSS & JS | Frontend Mentor
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        color: hsl(236, 100%, 87%);
+        margin-top: 2rem;
+      }
+
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="profile-card">
+        <div class="profile">
+          <div class="img-container">
+            <img src="./images/image-jeremy.png" alt="Jermy Robson" />
+          </div>
+          <div class="content">
+            <p>Report for</p>
+            <h2>Jermy Robson</h2>
+          </div>
+        </div>
+        <ul class="timeframes">
+          <li>
+            <button id="daily" class="btn">Daily</button>
+          </li>
+          <li>
+            <button id="weekly" class="btn active">Weekly</button>
+          </li>
+          <li>
+            <button id="monthly" class="btn">Monthly</button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="data-card work">
+        <div class="icon-container"></div>
+        <div class="content">
+          <div class="top">
+            <h3>Work</h3>
+            <button>
+              <svg
+                width="21"
+                height="5"
+                xmlns="http://www.w3.org/2000/svg"
+                class="ellipsis"
+              >
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="bottom">
+            <p class="current">32hrs</p>
+            <p class="previous">Last week - 36hrs</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-card play">
+        <div class="icon-container"></div>
+        <div class="content">
+          <div class="top">
+            <h3>Play</h3>
+            <button>
+              <svg
+                width="21"
+                height="5"
+                xmlns="http://www.w3.org/2000/svg"
+                class="ellipsis"
+              >
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="bottom">
+            <p class="current">32hrs</p>
+            <p class="previous">Last week - 36hrs</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-card study">
+        <div class="icon-container"></div>
+        <div class="content">
+          <div class="top">
+            <h3>Study</h3>
+            <button>
+              <svg
+                width="21"
+                height="5"
+                xmlns="http://www.w3.org/2000/svg"
+                class="ellipsis"
+              >
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="bottom">
+            <p class="current">32hrs</p>
+            <p class="previous">Last week - 36hrs</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-card exercise">
+        <div class="icon-container"></div>
+        <div class="content">
+          <div class="top">
+            <h3>Exercise</h3>
+            <button>
+              <svg
+                width="21"
+                height="5"
+                xmlns="http://www.w3.org/2000/svg"
+                class="ellipsis"
+              >
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="bottom">
+            <p class="current">32hrs</p>
+            <p class="previous">Last week - 36hrs</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-card social">
+        <div class="icon-container"></div>
+        <div class="content">
+          <div class="top">
+            <h3>Social</h3>
+            <button>
+              <svg
+                width="21"
+                height="5"
+                xmlns="http://www.w3.org/2000/svg"
+                class="ellipsis"
+              >
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="bottom">
+            <p class="current">32hrs</p>
+            <p class="previous">Last week - 36hrs</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-card self-care">
+        <div class="icon-container"></div>
+        <div class="content">
+          <div class="top">
+            <h3>Self Care</h3>
+            <button>
+              <svg
+                width="21"
+                height="5"
+                xmlns="http://www.w3.org/2000/svg"
+                class="ellipsis"
+              >
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="bottom">
+            <p class="current">32hrs</p>
+            <p class="previous">Last week - 36hrs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Kabir</a>.
+    </div>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>
